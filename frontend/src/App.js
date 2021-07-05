@@ -1,21 +1,23 @@
 import React from 'react';
+import { Switch,Route} from 'react-router-dom';
 import NavbarM from './components/NavbarM';
 import Home from './components/Home';
-import Footer from './components/Footer';
-import UseEffectAPI from './components/card';
-import {BrowserRouter as Router} from 'react-router-dom'
+import Posts from './components/Posts';
+import PostsIdComments from './components/PostIdComments';
 
-function App() {
-    return(
-        <Router>
-        <div>
-            <NavbarM/>
-            <Home/>
-            <UseEffectAPI />
-            <Footer/>
+const App = () => {
+    return ( 
+        <React.Fragment>
+            <NavbarM />
+            <div>            
+            <Switch>
+                <Route path="/posts/id/comments" exact component={PostsIdComments} />
+                <Route path="/posts" exact component={Posts} />
+                <Route path="/" exact component={Home} />
+            </Switch>
             </div>
-            </Router>
-    );
+        </React.Fragment>
+     );
 }
-
+ 
 export default App;

@@ -1,17 +1,32 @@
-import React from 'react'
-import background from '../image/background.jpg';
+import React from "react";
+import background from "../image/background.jpg";
+import Footer from "./Footer";
 function Home() {
-    return (
-        <div style={{ backgroundImage: `url(${background})`,backgroundRepeat:'no-repeat' , backgroundSize: 'cover'}}>
-        <div>
-        
-        <div className="homepage">
-            <p style={{textAlign: "center"}}>WELCOME EVERYONE</p>
-            <h5 style={{textAlign: "center"}}>Happy to see you</h5>
+  return (
+    <div
+      style={{
+        backgroundImage: `url(${background})`,
+        backgroundSize: "cover",
+        height: "676px"
+      }}
+    >
+      <div>
+        <div className="homepage"
+          style={{
+            paddingTop: "267px"
+          }}
+        >
+          <p style={{ textAlign: "center" }}>
+            CIPHERS SCHOOL FSD TEST ASSIGNMENT
+          </p>
+          <h5 style={{ textAlign: "center" }}>
+            Glad to see you, have a nice day !!
+          </h5>
         </div>
-        </div>
-        </div>
-    )
+      </div>
+      <Footer />
+    </div>
+  );
 }
 
 export default Home;
